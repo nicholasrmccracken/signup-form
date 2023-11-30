@@ -10,42 +10,53 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="hero-image">
-        <div id="logo"></div>
+    <div id="image-panel">
+        <p id="logo">Botify<span>TM</span></p>
+        <div id="hero-image"></div>
+        <p id="tagline">Scale your business with an AI workforce!</p>
     </div>
     <div id="form-panel">
         <header>
-            <p>Sacrifice your privacy with Y!</p>
-            <p>Forfeit your liberties:</p>
+            <p>Sign-up for blazingly fast growth:</p>
         </header>
         <form>
-            <div class="form-item">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" required>
+            <div class="form">
+                <div class="form-item">
+                    <label for="fname"></label>
+                    <input type="text" id="fname" name="fname" placeholder="" required>
+                    <span>FIRST NAME</span>
+                </div>
+                <div class="form-item">
+                    <label for="lname"></label>
+                    <input type="text" id="lname" name="lname" placeholder="" required>
+                    <span>LAST NAME</span>
+                </div>
+                <div class="form-item">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder=""  required>
+                    <span>EMAIL</span>
+                </div>
+                <div class="form-item">
+                    <label for="phone"></label>
+                    <input type="tel" id="phone" name="phone" placeholder="" >
+                    <span>PHONE NUMBER</span>
+                </div>
+                <div class="form-item">
+                    <label for="password"></label>
+                    <input type="password" id="password" name="password" minlength="6" placeholder="" required>
+                    <span>PASSWORD</span>
+                </div>
+                <div class="form-item">
+                    <label for="confirm-pass"></label>
+                    <input type="password" id="confirm-pass" name="confirm-pass"  minlength="6" placeholder="" required>
+                    <span>CONFIRM PASSWORD</span>
+                </div>
             </div>
-            <div class="form-item">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" required>
+            <div class="submission">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <span>Log in!</span></p>
             </div>
-            <div class="form-item">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-item">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-item">
-                <label for="pass">Password</label>
-                <input type="password" id="" name="" required>
-            </div>
-            <div class="form-item">
-                <label for="confirm-pass">Confirm Password</label>
-                <input type="password" id="" name="" required>
-            </div>
-            <button type="submit">Create Account</button>
         </form>
-        <p>Already have an account? <span>Log in!</span></p>
     </div>
 </body>
 </html>

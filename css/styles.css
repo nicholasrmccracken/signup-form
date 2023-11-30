@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+:root {
+    --image-panel-color: rgb(216, 108, 108);
+    --form-panel-color: rgb(58 71 78);
+    --accent-color: rgb(224, 224, 224);
+    --default-transition: all 0.4s ease-in-out;
+    --valid-color: rgb(81, 137, 57);
+    --invalid-color: rgb(177, 53, 53);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+p {
+    font-weight: bold;
+}
+
+#image-panel {
+    background-color: var(--image-panel-color);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+#logo {
+    font-size: 2.1rem;
+    font-weight: bold;
+    position: absolute;
+}
+
+#logo > span {
+    font-size: 0.5em;
+    position: relative;
+    bottom: 1rem;
+    left: 0.5rem;
+}
+
+#tagline {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+#hero-image {
+    background: url('../images/hero-image.svg') no-repeat center;
+    height: 100%;
+    width: 100%;
+    transition: var(--default-transition);
+}
+
+#hero-image:hover {
+    transform: scale(1.05);
+}
+
+#form-panel {
+    background-color: var(--form-panel-color);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1.05;
+    justify-content: space-around;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+header {
+    font-size: 2.25rem;
+}
+
+.submission {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.submission > p {
+    color: var(--accent-color);
+}
+
+.submission > p > span {
+    color: var(--image-panel-color);
+    transition: var(--default-transition);
+}
+
+.submission > p > span:hover {
+    transform: scale(1.05);
+}
+
+[type="submit"] {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--image-panel-color);
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.5);
+    transition: var(--default-transition);
+    max-width: 50%;
+    font-weight: bold;
+}
+
+[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+[type="submit"]:active {
+    box-shadow: none;
+    transform: translate(4px, 4px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15vh;
+    width: 500px;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-content: center;
+}
+
+input {
+    background-color: inherit;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid black;
+    transition: var(--default-transition);
+    width: 200px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: white;
+}
+
+.form-item > span {
+    color: var(--accent-color);
+    position: absolute;
+    bottom: 10px;
+    padding: 5px;
+    transition: var(--default-transition);
+    pointer-events: none;
+}
+
+input:not(:placeholder-shown):not(:focus):valid {
+    border: 2px solid var(--valid-color);
+}
+
+input:not(:placeholder-shown):not(:focus):invalid,
+input:not(:placeholder-shown):not(:focus).invalid {
+    border: 2px solid var(--invalid-color);
+}
+
+input:not(:placeholder-shown):not(:focus) ~ span {
+    display: none;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--image-panel-color);
+}
+
+input:focus ~ span {
+    background-color: var(--image-panel-color);
+    color: white;
+    transform: translate(0.5rem, -1.5rem);
+    padding: 0.25em 10px;
+    font-size: 0.8em;
+    border-radius: 0.25rem;
+}
+
